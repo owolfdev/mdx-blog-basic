@@ -11,7 +11,7 @@ import CookieConsentComponent from "@/components/cookie-consent";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MDX Blog",
+  title: "MDX Blog Basic",
   description: "Simple static blog built with Next.js and MDX.",
   keywords: ["next.js", "mdx", "blog", "static"],
 };

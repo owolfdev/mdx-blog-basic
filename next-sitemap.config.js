@@ -7,8 +7,6 @@ module.exports = {
     "/blog/create",
     "/apple-icon.png",
     "/settings",
-    "/contact",
-    "/contact/thank-you",
     "/privacy",
   ],
   // ...other options
