@@ -120,7 +120,7 @@ export default function Home() {
 
       <div>
         <span className="font-bold">Get MDXBlog</span>: Download the{" "}
-        <Link target="_blank" href="https://github.com/owolfdev/mdx-blog">
+        <Link target="_blank" href="https://github.com/owolfdev/mdx-blog-basic">
           <span className="font-bold">github repo</span>
         </Link>
         . Instructions for installation and deployment are included in the
