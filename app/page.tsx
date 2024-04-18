@@ -132,7 +132,10 @@ export default function Home() {
             <Link href="/about">• Documentation.</Link>
           </li>
           <li>
-            <Link target="_blank" href="https://github.com/owolfdev/mdx-blog">
+            <Link
+              target="_blank"
+              href="https://github.com/owolfdev/mdx-blog-basic"
+            >
               • MDXBlog GitHub Repo
             </Link>
           </li>

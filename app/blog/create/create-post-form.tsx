@@ -47,6 +47,9 @@ const formSchema = z.object({
   title: z.string().min(3, {
     message: "Title must be at least 2 characters.",
   }),
+  author: z.string().min(3, {
+    message: "Author must be at least 3 characters.",
+  }),
   description: z.string().min(15, {
     message: "Description must be at least 15 characters.",
   }),
@@ -65,6 +68,7 @@ export function CreatePostForm() {
       date: new Date(),
       type: "blog",
       title: "",
+      author: "",
       description: "",
       content: "",
       categories: ["Web Development"],
@@ -90,7 +94,6 @@ export function CreatePostForm() {
     // Add the author data to the submission values
     const submissionData = {
       ...values,
-      author: authorName,
       id: uuidv4(),
     };
 
@@ -177,6 +180,21 @@ export function CreatePostForm() {
             </FormItem>
           )}
         />
+        {/* author */}
+        <FormField
+          control={form.control}
+          name="author"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Author</FormLabel>
+              <FormControl>
+                <Input placeholder="Author" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        {/* description */}
         <FormField
           control={form.control}
           name="description"
