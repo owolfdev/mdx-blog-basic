@@ -41,6 +41,11 @@ import { MultiSelect } from "@/components/rs-multi-select";
 
 import { useRouter } from "next/navigation";
 
+import "@mdxeditor/editor/style.css";
+import Editor from "@/components/mdx-editor"; 
+
+
+
 const formSchema = z.object({
   date: z.date(), // Make dob optional
   type: z.string().optional(),
@@ -215,11 +220,9 @@ export function CreatePostForm() {
             <FormItem>
               <FormLabel>Content</FormLabel>
               <FormControl>
-                <Textarea
-                  id="content"
-                  className="h-[300px]"
-                  placeholder="Content"
-                  {...field}
+              <Editor
+                  initialContent={form.watch("content")}
+                  onContentChange={(value) => form.setValue("content", value)}
                 />
               </FormControl>
               <FormMessage />

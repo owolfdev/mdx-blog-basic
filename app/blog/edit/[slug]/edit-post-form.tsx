@@ -54,6 +54,7 @@ import {
 } from "@/components/ui/form";
 
 import { MultiSelect } from "@/components/rs-multi-select";
+import Editor from "@/components/mdx-editor"; 
 
 const formSchema = z.object({
   date: z.date(),
@@ -253,12 +254,10 @@ export function EditPostForm({ postData }: { postData: any }) {
               <FormItem>
                 <FormLabel>Content</FormLabel>
                 <FormControl>
-                  <Textarea
-                    id="content"
-                    className="h-[300px]"
-                    placeholder="Content"
-                    {...field}
-                  />
+                <Editor
+                  initialContent={form.watch("content")}
+                  onContentChange={(value) => form.setValue("content", value)}
+                />
                 </FormControl>
                 <FormMessage />
               </FormItem>
